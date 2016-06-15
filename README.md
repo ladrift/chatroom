@@ -13,7 +13,7 @@ go get github.com/ladrift/chatroom
 ```
 and run
 ```bash
-$GOPATH/chatroom
+$GOPATH/bin/chatroom
 ```
 Go to visit `http://localhost:4000` in your browser.
 You can open two windows to simulate two chatting persons.
