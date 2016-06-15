@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Websocket Chat room</title>
+  </head>
+  <body>
+    <input type="text" id="chatInput" onkeydown='if (event.keyCode == 13) { sendMessage(this.value); this.value = ""; }'/>
+    <div id="chatContent">
+      <h3>Chat content</h3>
+    </div>
+  </body>
+  <script type="text/javascript" charset="utf-8">
+var socket = new WebSocket("ws://" + window.location.host + "/socket");
+socket.onmessage = onMessage;
+socket.onclose = onClose;
+
+function sendMessage(message) {
+  socket.send(message);
+  document.getElementById("chatContent").innerHTML += message + "<br>";
+}
+
+function onMessage(e) {
+  document.getElementById("chatContent").innerHTML += e.data + "<br>";
+}
+
+function onClose() {
+  socket.close();
+  document.getElementById("chatContent").innerHTML += "chat was shutted down. Nobody loves you :(<br>";
+}
+  </script>
+</html>
