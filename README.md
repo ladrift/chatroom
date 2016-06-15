@@ -9,11 +9,11 @@ It can support multiple chatting simultaneously benefit from Go's concurrent fea
 First, install [Go](https://golang.org/)
 Then,
 ```bash
-go get github.com/ladrift/chatroom
+$ go get github.com/ladrift/chatroom
 ```
 and run
 ```bash
-$GOPATH/bin/chatroom
+$ $GOPATH/bin/chatroom
 ```
 Go to visit `http://localhost:4000` in your browser.
 You can open two windows to simulate two chatting persons.
