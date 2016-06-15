@@ -15,7 +15,7 @@ and run
 ```bash
 $ $GOPATH/bin/chatroom
 ```
-Go to visit `http://localhost:4000` in your browser.
+Go to visit http://localhost:4000/ in your browser.
 You can open two windows to simulate two chatting persons.
 
 ## License
